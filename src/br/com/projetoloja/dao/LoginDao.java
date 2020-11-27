@@ -41,9 +41,6 @@ public class LoginDao {
                 HomePosLogin homi = new HomePosLogin();
                 homi.setVisible(true);
                 return true;
-            }else{
-                LoginPessoa login = new LoginPessoa();
-                login.setVisible(true);
             }
             
         } catch (SQLException ErroSql) {

@@ -208,7 +208,13 @@ public class LoginPessoa extends javax.swing.JFrame {
         l.setUsuario(txtEmailLogin.getText());
         l.setSenha(String.valueOf(txtSenha.getPassword()));  
         
-        dao.listar(l);
+        if(dao.listar(l)){
+            this.dispose();
+        }else{
+            this.dispose();
+                LoginPessoa login = new LoginPessoa();
+                login.setVisible(true);
+        }
         
     }//GEN-LAST:event_btnLoginActionPerformed
 
