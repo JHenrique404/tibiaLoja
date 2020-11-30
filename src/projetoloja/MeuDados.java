@@ -25,7 +25,7 @@ public class MeuDados extends javax.swing.JFrame {
      */
     public MeuDados() {
         initComponents();
-        con.conectar();
+        
     }
 
     /**

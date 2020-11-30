@@ -7,13 +7,6 @@ package projetoloja;
 import br.com.projetoloja.dao.LoginDao;
 import br.com.projetoloja.modelo.Login;
 import java.awt.Toolkit;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.JOptionPane;
 /**
  *
  * @author João H.B
