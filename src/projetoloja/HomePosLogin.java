@@ -77,6 +77,11 @@ public class HomePosLogin extends javax.swing.JFrame {
         jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/dollar.png"))); // NOI18N
         jButton5.setText("Loja");
         jButton5.setFocusPainted(false);
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         btnSair.setBackground(new java.awt.Color(255, 255, 255));
         btnSair.setFont(new java.awt.Font("Maiandra GD", 0, 14)); // NOI18N
@@ -172,6 +177,13 @@ public class HomePosLogin extends javax.swing.JFrame {
         casa.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnSairActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        LojaLoja abre = new LojaLoja();
+        this.dispose();
+        abre.setVisible(true);
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments
