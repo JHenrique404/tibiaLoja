@@ -5,6 +5,8 @@
  */
 package projetoloja;
 
+import br.com.projetoloja.dao.ClienteDao;
+import br.com.projetoloja.modelo.Login;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -23,6 +25,11 @@ public class MeuDados extends javax.swing.JFrame {
      */
     public MeuDados() {
         initComponents();
+        ClienteDao dao = new ClienteDao();
+
+        lblNome.setText(dao.listarLogado().getNome());
+        lblEmail.setText(dao.listarLogado().getEmail());
+        lblCelular.setText(dao.listarLogado().getTelefone());
     }
 
     /**
@@ -41,8 +48,8 @@ public class MeuDados extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         lblNome = new javax.swing.JLabel();
-        labelEmail = new javax.swing.JLabel();
-        labelCelular = new javax.swing.JLabel();
+        lblEmail = new javax.swing.JLabel();
+        lblCelular = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
@@ -77,9 +84,9 @@ public class MeuDados extends javax.swing.JFrame {
 
         lblNome.setText("Nome");
 
-        labelEmail.setText("email");
+        lblEmail.setText("email");
 
-        labelCelular.setText("celular");
+        lblCelular.setText("celular");
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Warrior img.png"))); // NOI18N
 
@@ -96,11 +103,11 @@ public class MeuDados extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel5)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(labelEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(lblEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel6)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(labelCelular))
+                                .addComponent(lblCelular, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel2)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -119,11 +126,11 @@ public class MeuDados extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(labelEmail))
+                    .addComponent(lblEmail))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(labelCelular))
+                    .addComponent(lblCelular))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
                 .addComponent(btnSair, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -181,6 +188,15 @@ public class MeuDados extends javax.swing.JFrame {
         teste.setVisible(true);
     }//GEN-LAST:event_btnSairActionPerformed
 
+    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
+        
+
+    }//GEN-LAST:event_btnLoginActionPerformed
+
+    private void btnLoginKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnLoginKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnLoginKeyPressed
+
     /**
      * @param args the command line arguments
      */
@@ -227,8 +243,8 @@ public class MeuDados extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JLabel labelCelular;
-    private javax.swing.JLabel labelEmail;
+    private javax.swing.JLabel lblCelular;
+    private javax.swing.JLabel lblEmail;
     private javax.swing.JLabel lblNome;
     // End of variables declaration//GEN-END:variables
 }

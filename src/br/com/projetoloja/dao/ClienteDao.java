@@ -2,6 +2,7 @@ package br.com.projetoloja.dao;
 
 import br.com.projetoloja.conexao.Conexao;
 import br.com.projetoloja.modelo.Cliente;
+import br.com.projetoloja.modelo.Login;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -116,5 +117,36 @@ public class ClienteDao {
       
         return clientes;
     }
+    
+     public Cliente listarLogado(){
+        List<Cliente> clientes = new ArrayList();
+        Connection con = Conexao.getConnection();
+        Cliente c = new Cliente();
+        PreparedStatement pstm = null;
+        ResultSet rs = null;
+        
+        try {
+            pstm = con.prepareStatement("SELECT * FROM CLIENTES WHERE NOME = '"+Login.clienteAtual()+"'");
+            rs = pstm.executeQuery();
+            rs.first();
+            
+            c.setNome(rs.getString(2));
+            c.setEmail(rs.getString(4));
+            c.setTelefone(rs.getString(5));
+            
+            return c;
+            
+            
+     
+        } catch (SQLException ErroSql) {
+            JOptionPane.showMessageDialog(null, "Erro ao listar dados: \n" + ErroSql, "Não Listado" , JOptionPane.ERROR_MESSAGE);  
+        }finally{
+            Conexao.closeConnection(con, pstm, rs);
+        }
+      
+        return c;
+    }
+    
+    
 }
 
