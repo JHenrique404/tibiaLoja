@@ -5,7 +5,17 @@ public class Login {
     private String usuario;
     private String senha;
     private String createdAt;
-
+    private static String nomeUsuario;
+    
+    public static void clienteAtual(String nome){
+        nomeUsuario = nome;
+    }   
+    
+    public static String clienteAtual(){
+        return nomeUsuario;
+    }
+    
+    
     public int getIdLogin() {
         return idLogin;
     }

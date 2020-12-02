@@ -5,6 +5,7 @@
  */
 package projetoloja;
 
+import br.com.projetoloja.modelo.Login;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -25,6 +26,7 @@ public class MeuDados extends javax.swing.JFrame {
      */
     public MeuDados() {
         initComponents();
+        lblNome.setText(Login.clienteAtual());
         
     }
 
@@ -210,7 +212,7 @@ public class MeuDados extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSairActionPerformed
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-
+        
 
     }//GEN-LAST:event_btnLoginActionPerformed
 

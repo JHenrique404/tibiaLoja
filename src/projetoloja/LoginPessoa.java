@@ -5,6 +5,7 @@
  */
 package projetoloja;
 import br.com.projetoloja.dao.LoginDao;
+import br.com.projetoloja.modelo.Cliente;
 import br.com.projetoloja.modelo.Login;
 import java.awt.Toolkit;
 /**
@@ -15,6 +16,8 @@ public class LoginPessoa extends javax.swing.JFrame {
     
     String email;
     String senha;
+    
+    
     
     public LoginPessoa() {
         initComponents();
@@ -198,8 +201,13 @@ public class LoginPessoa extends javax.swing.JFrame {
         Login l = new Login();
         LoginDao dao = new LoginDao();
         
+        
+        
         l.setUsuario(txtEmailLogin.getText());
         l.setSenha(String.valueOf(txtSenha.getPassword()));  
+        
+        Login.clienteAtual(txtEmailLogin.getText());
+        
         
         if(dao.listar(l)){
             this.dispose();

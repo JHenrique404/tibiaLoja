@@ -4,6 +4,8 @@ public class Cliente {
     private int idCliente;
     private String nome, senha, email, telefone;
 
+    
+    
     public int getIdCliente() {
         return idCliente;
     }
