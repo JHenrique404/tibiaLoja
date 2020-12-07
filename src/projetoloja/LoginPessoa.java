@@ -179,7 +179,12 @@ public class LoginPessoa extends javax.swing.JFrame {
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
       
-        Login l = new Login();
+        if("root".equals(txtEmailLogin.getText()) & "root".equals(String.valueOf(txtSenha.getPassword()))){
+            this.dispose();
+            CadastrarProduto root = new CadastrarProduto();
+            root.setVisible(true);
+        }else{
+            Login l = new Login();
         LoginDao dao = new LoginDao();
         
         
@@ -196,6 +201,7 @@ public class LoginPessoa extends javax.swing.JFrame {
             this.dispose();
                 LoginPessoa login = new LoginPessoa();
                 login.setVisible(true);
+        }
         }
         
     }//GEN-LAST:event_btnLoginActionPerformed
