@@ -54,9 +54,10 @@ O projeto <b>TIBIASTORE</b> foi criado no 2ºSemestre de ADS da Universidade FAC
 </h1>
 
 <h1 align="center">
-    <img src="https://ik.imagekit.io/zuztejak0m/WhatsApp_Image_2020-10-29_at_14.32.35_R9IPkR0zT.jpeg">
-    <! -- Imagem do DIAGRAMA-->
+    <img src="https://ik.imagekit.io/zuztejak0m/WhatsApp_Image_2020-12-07_at_17.38.43_3ZP4CK-9_.jpeg">
 </h1>
+
+<p>Link para o Diagrama: <a href="https://app.creately.com/diagram/L05DDDAD3BP">Diagrama de Classes</a></p> 
 
 <br><br>
 
